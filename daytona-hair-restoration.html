@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daytona Hair Restoration | Hair Transplant Florida</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --cream: #F8F3EC;
+      --cream-dark: #EFE7D9;
+      --bronze: #A0714F;
+      --bronze-light: #C49A72;
+      --bronze-dark: #7A5337;
+      --charcoal: #2C2420;
+      --text: #3D2F28;
+      --text-light: #7A6A60;
+      --white: #FDFAF6;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ─── TOP BAR ─── */
+    .topbar {
+      background: var(--charcoal);
+      color: #D4B896;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      font-weight: 400;
+    }
+    .topbar a { color: var(--bronze-light); text-decoration: none; font-weight: 600; }
+    .topbar a:hover { color: #fff; }
+
+    /* ─── NAV ─── */
+    nav {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(44,36,32,0.08);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 30px;
+    }
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--charcoal);
+      text-decoration: none;
+      line-height: 1.1;
+    }
+    .logo span { color: var(--bronze); display: block; font-size: 12px; letter-spacing: 0.25em; font-family: 'Jost', sans-serif; font-weight: 400; text-transform: uppercase; margin-top: 2px; }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0; right: 0;
+      height: 1px;
+      background: var(--bronze);
+      transform: scaleX(0);
+      transition: transform 0.25s;
+    }
+    .nav-links a:hover { color: var(--bronze); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-cta {
+      background: var(--bronze);
+      color: #fff !important;
+      padding: 10px 22px;
+      border-radius: 2px;
+      letter-spacing: 0.12em;
+      transition: background 0.2s !important;
+    }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--bronze-dark) !important; color: #fff !important; }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--charcoal);
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(44,36,32,0.85) 0%, rgba(44,36,32,0.4) 60%, rgba(160,113,79,0.25) 100%),
+        url('https://images.unsplash.com/photo-1618939304347-e91b1f33d2ab?w=1600&q=80') center/cover no-repeat;
+      animation: heroZoom 12s ease-in-out infinite alternate;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1); }
+      to   { transform: scale(1.04); }
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 30px;
+    }
+    .hero-eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--bronze-light);
+      margin-bottom: 20px;
+      font-weight: 500;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 7vw, 82px);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.08;
+      max-width: 700px;
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.4s forwards;
+    }
+    .hero h1 em { font-style: italic; color: var(--bronze-light); }
+    .hero-sub {
+      font-size: 17px;
+      color: rgba(248,243,236,0.8);
+      max-width: 480px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+      font-weight: 300;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.6s forwards;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.8s forwards;
+    }
+    .btn-primary {
+      background: var(--bronze);
+      color: #fff;
+      padding: 15px 34px;
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 2px;
+      transition: background 0.25s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--bronze-dark); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      padding: 15px 34px;
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 500;
+      border: 1px solid rgba(248,243,236,0.5);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 2px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--bronze-light); background: rgba(160,113,79,0.15); }
+
+    .hero-stats {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      display: flex;
+      gap: 40px;
+      z-index: 2;
+      opacity: 0;
+      animation: fadeUp 0.8s 1s forwards;
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      font-weight: 600;
+      color: var(--bronze-light);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(248,243,236,0.6);
+      margin-top: 4px;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── INTRO BAND ─── */
+    .intro-band {
+      background: var(--bronze);
+      padding: 22px 30px;
+      text-align: center;
+    }
+    .intro-band p {
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .intro-band a { color: #FFE0C0; text-decoration: none; font-weight: 600; }
+
+    /* ─── SECTION SHARED ─── */
+    section { padding: 90px 30px; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--bronze);
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(30px, 4vw, 48px);
+      font-weight: 400;
+      color: var(--charcoal);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .section-title em { font-style: italic; color: var(--bronze); }
+    .divider {
+      width: 50px;
+      height: 2px;
+      background: var(--bronze);
+      margin-bottom: 30px;
+    }
+
+    /* ─── ABOUT ─── */
+    .about { background: var(--white); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+    .about-img {
+      position: relative;
+    }
+    .about-img img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+      border-radius: 2px;
+    }
+    .about-img-badge {
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      background: var(--bronze);
+      color: #fff;
+      padding: 28px 32px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      font-weight: 600;
+      line-height: 1;
+      text-align: center;
+      border-radius: 2px;
+    }
+    .about-img-badge span { display: block; font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 400; margin-top: 4px; }
+    .about-text p {
+      font-size: 16px;
+      line-height: 1.85;
+      color: var(--text-light);
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+    .about-features {
+      list-style: none;
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 24px;
+    }
+    .about-features li {
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .about-features li::before {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: var(--bronze);
+      flex-shrink: 0;
+    }
+
+    /* ─── SERVICES ─── */
+    .services { background: var(--cream); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 50px;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: 2px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(44,36,32,0.12); }
+    .service-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s;
+    }
+    .service-card:hover img { transform: scale(1.04); }
+    .service-card-body { padding: 28px 24px; }
+    .service-card-icon {
+      width: 36px;
+      height: 2px;
+      background: var(--bronze);
+      margin-bottom: 16px;
+    }
+    .service-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+    .service-card p {
+      font-size: 13.5px;
+      color: var(--text-light);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 18px;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--bronze);
+      font-weight: 600;
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+    .service-link:hover { gap: 10px; }
+    .service-link::after { content: '→'; }
+
+    /* ─── BEFORE/AFTER ─── */
+    .banda { background: var(--charcoal); }
+    .banda .section-title { color: var(--white); }
+    .banda .section-label { color: var(--bronze-light); }
+    .banda .divider { background: var(--bronze-light); }
+    .banda-intro { color: rgba(248,243,236,0.65); font-size: 16px; max-width: 560px; line-height: 1.8; font-weight: 300; margin-bottom: 50px; }
+    .banda-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+    }
+    .banda-item {
+      position: relative;
+      overflow: hidden;
+    }
+    .banda-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(20%);
+      transition: transform 0.5s, filter 0.4s;
+    }
+    .banda-item:hover img { transform: scale(1.06); filter: grayscale(0%); }
+    .banda-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(44,36,32,0.85));
+      padding: 30px 20px 20px;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.3s;
+    }
+    .banda-item:hover .banda-overlay { transform: translateY(0); opacity: 1; }
+    .banda-overlay span {
+      color: var(--bronze-light);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .banda-cta { text-align: center; margin-top: 50px; }
+
+    /* ─── WHY US ─── */
+    .why { background: var(--cream-dark); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: start;
+      margin-top: 10px;
+    }
+    .why-items { display: flex; flex-direction: column; gap: 36px; }
+    .why-item { display: flex; gap: 24px; align-items: flex-start; }
+    .why-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--bronze-light);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 48px;
+      opacity: 0.6;
+    }
+    .why-item h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+    .why-item p { font-size: 14.5px; color: var(--text-light); line-height: 1.8; font-weight: 300; }
+    .why-img img {
+      width: 100%;
+      height: 550px;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+
+    /* ─── TESTIMONIALS ─── */
+    .testimonials { background: var(--white); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 50px;
+    }
+    .testimonial-card {
+      background: var(--cream);
+      padding: 38px 32px;
+      border-radius: 2px;
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '"';
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 100px;
+      color: var(--bronze);
+      opacity: 0.15;
+      position: absolute;
+      top: 10px;
+      left: 24px;
+      line-height: 1;
+    }
+    .testimonial-stars { color: var(--bronze); font-size: 14px; margin-bottom: 18px; letter-spacing: 2px; }
+    .testimonial-card p { font-size: 14.5px; color: var(--text-light); line-height: 1.85; font-style: italic; font-weight: 300; }
+    .testimonial-author {
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testimonial-avatar {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: var(--bronze-light);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: #fff;
+      font-weight: 600;
+    }
+    .testimonial-author-info strong { display: block; font-size: 14px; font-weight: 600; color: var(--charcoal); }
+    .testimonial-author-info span { font-size: 12px; color: var(--text-light); }
+
+    /* ─── CONSULTATION CTA ─── */
+    .cta-section {
+      background:
+        linear-gradient(135deg, rgba(44,36,32,0.92) 0%, rgba(120,80,52,0.85) 100%),
+        url('https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=1400&q=80') center/cover;
+      padding: 100px 30px;
+      text-align: center;
+    }
+    .cta-section .section-label { color: var(--bronze-light); }
+    .cta-section .section-title { color: var(--white); margin-bottom: 20px; }
+    .cta-section p { color: rgba(248,243,236,0.75); font-size: 17px; max-width: 520px; margin: 0 auto 40px; line-height: 1.8; font-weight: 300; }
+    .cta-section .divider { margin: 0 auto 30px; }
+
+    /* ─── CONTACT ─── */
+    .contact { background: var(--cream); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 70px;
+      align-items: start;
+    }
+    .contact-info-item {
+      margin-bottom: 32px;
+    }
+    .contact-info-item h4 {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--bronze);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .contact-info-item p, .contact-info-item a {
+      font-size: 15.5px;
+      color: var(--text);
+      line-height: 1.7;
+      text-decoration: none;
+      font-weight: 300;
+    }
+    .contact-info-item a:hover { color: var(--bronze); }
+    .contact-form { display: flex; flex-direction: column; gap: 18px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .form-group { display: flex; flex-direction: column; gap: 7px; }
+    .form-group label {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      background: var(--white);
+      border: 1px solid #DDD3C5;
+      border-radius: 2px;
+      padding: 13px 16px;
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s;
+      font-weight: 300;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--bronze);
+    }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-disclaimer { font-size: 12px; color: var(--text-light); line-height: 1.6; font-style: italic; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--charcoal);
+      padding: 60px 30px 30px;
+      color: rgba(248,243,236,0.55);
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid rgba(248,243,236,0.1);
+      margin-bottom: 30px;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .footer-logo span { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.25em; color: var(--bronze-light); display: block; margin-top: 3px; font-weight: 400; }
+    .footer-about { font-size: 13.5px; line-height: 1.8; margin-top: 16px; font-weight: 300; }
+    .footer-col h5 {
+      color: var(--white);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul a {
+      color: rgba(248,243,236,0.55);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 300;
+      transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: var(--bronze-light); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+    }
+    .footer-bottom a { color: var(--bronze-light); text-decoration: none; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .about-grid, .why-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .banda-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 30px; }
+      .about-img-badge { bottom: 10px; right: 10px; }
+      .hero-stats { position: static; margin-top: 40px; display: flex; gap: 30px; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      .services-grid, .banda-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  📞 Call Today for a Free Consultation: <a href="tel:3865550100">(386) 555-0100</a> &nbsp;|&nbsp; Serving Daytona Beach, Florida
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      Daytona Hair Restoration
+      <span>Daytona Beach, Florida</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">Our Center</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact" class="nav-cta">Free Consultation</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Daytona Beach's Premier Hair Restoration Clinic</p>
+    <h1>Restore Your Hair. <em>Reclaim</em> Your Confidence.</h1>
+    <p class="hero-sub">Advanced, minimally invasive hair restoration techniques tailored to your unique needs — with natural-looking results that last a lifetime.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Schedule Free Consultation</a>
+      <a href="#results" class="btn-outline">View Patient Results</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Patients Treated</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">98%</div>
+        <div class="stat-label">Satisfaction Rate</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO BAND -->
+<div class="intro-band">
+  <p>State-of-the-art FUE · FUT · Scalp Micropigmentation · PRP Therapy &nbsp;—&nbsp; <a href="#contact">Book Your Free Consultation Today →</a></p>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=900&q=80" alt="Hair restoration specialist consulting with patient" />
+        <div class="about-img-badge">
+          15+
+          <span>Years of<br>Excellence</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-label">About Our Center</p>
+        <h2 class="section-title">Daytona's Trusted Hair <em>Restoration</em> Specialists</h2>
+        <div class="divider"></div>
+        <p>At Daytona Hair Restoration, we believe every patient deserves personalized, compassionate care delivered with cutting-edge technology. Our team of board-certified specialists has helped hundreds of men and women throughout Daytona Beach and the greater Volusia County area regain full, natural-looking hair.</p>
+        <p>We combine the latest minimally invasive procedures with artful technique, ensuring results that are indistinguishable from your natural hairline — because your confidence matters to us.</p>
+        <ul class="about-features">
+          <li>Board-Certified Specialists</li>
+          <li>Minimally Invasive Options</li>
+          <li>State-of-the-Art Facility</li>
+          <li>Personalized Treatment Plans</li>
+          <li>No Visible Scarring (FUE)</li>
+          <li>Lifetime Natural Results</li>
+          <li>Free Initial Consultation</li>
+          <li>Flexible Financing Available</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title">Our Hair Restoration <em>Treatments</em></h2>
+    <div class="divider"></div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80" alt="FUE Hair Transplant" />
+        <div class="service-card-body">
+          <div class="service-card-icon"></div>
+          <h3>FUE Hair Transplant</h3>
+          <p>Follicular Unit Extraction is our most popular procedure — individually extracting follicles for a natural, scar-free result with minimal downtime.</p>
+          <a href="#contact" class="service-link">Learn More</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=600&q=80" alt="FUT Strip Method" />
+        <div class="service-card-body">
+          <div class="service-card-icon"></div>
+          <h3>FUT Strip Method</h3>
+          <p>The Follicular Unit Transplantation strip method is ideal for patients needing maximum graft numbers in a single session for denser coverage.</p>
+          <a href="#contact" class="service-link">Learn More</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" alt="Scalp Micropigmentation" />
+        <div class="service-card-body">
+          <div class="service-card-icon"></div>
+          <h3>Scalp Micropigmentation</h3>
+          <p>A non-surgical cosmetic procedure that replicates the look of hair follicles using specialized pigments — ideal for any stage of hair loss.</p>
+          <a href="#contact" class="service-link">Learn More</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80" alt="PRP Therapy" />
+        <div class="service-card-body">
+          <div class="service-card-icon"></div>
+          <h3>PRP Therapy</h3>
+          <p>Platelet-Rich Plasma therapy uses your body's own growth factors to stimulate dormant follicles, slow hair loss, and support transplant healing.</p>
+          <a href="#contact" class="service-link">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE & AFTER -->
+<section class="banda" id="results">
+  <div class="section-inner">
+    <p class="section-label">Real Patient Results</p>
+    <h2 class="section-title">Before &amp; After Gallery</h2>
+    <div class="divider"></div>
+    <p class="banda-intro">Our patients' transformations speak for themselves. These are real results achieved right here in Daytona Beach. Individual results may vary.</p>
+    <div class="banda-grid">
+      <div class="banda-item">
+        <img src="https://images.unsplash.com/photo-1568585219557-b14b7f8a6f30?w=600&q=80" alt="Before and after patient 1" />
+        <div class="banda-overlay"><span>FUE Transplant · 2,400 Grafts</span></div>
+      </div>
+      <div class="banda-item">
+        <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=600&q=80" alt="Before and after patient 2" />
+        <div class="banda-overlay"><span>PRP + FUE · 1,800 Grafts</span></div>
+      </div>
+      <div class="banda-item">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Before and after patient 3" />
+        <div class="banda-overlay"><span>FUT Strip · 3,100 Grafts</span></div>
+      </div>
+      <div class="banda-item">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80" alt="Before and after patient 4" />
+        <div class="banda-overlay"><span>Scalp Micropigmentation</span></div>
+      </div>
+      <div class="banda-item">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80" alt="Before and after patient 5" />
+        <div class="banda-overlay"><span>FUE Transplant · 2,000 Grafts</span></div>
+      </div>
+      <div class="banda-item">
+        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80" alt="Before and after patient 6" />
+        <div class="banda-overlay"><span>PRP Therapy · 6 Sessions</span></div>
+      </div>
+    </div>
+    <div class="banda-cta">
+      <a href="#contact" class="btn-primary">Schedule Your Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why">
+  <div class="section-inner">
+    <div class="why-grid">
+      <div>
+        <p class="section-label">Why Choose Us</p>
+        <h2 class="section-title">The Daytona Hair Restoration <em>Difference</em></h2>
+        <div class="divider"></div>
+        <div class="why-items">
+          <div class="why-item">
+            <div class="why-num">01</div>
+            <div>
+              <h4>World-Class Specialists</h4>
+              <p>Our physicians are board-certified with specialized training in hair restoration surgery, bringing precision and artistry to every procedure.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-num">02</div>
+            <div>
+              <h4>Advanced Technology</h4>
+              <p>We invest in the latest FDA-cleared hair restoration systems so you receive the safest, most effective treatment available anywhere in Florida.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-num">03</div>
+            <div>
+              <h4>Personalized Care Plans</h4>
+              <p>No two patients are alike. We craft a customized plan based on your hair loss pattern, goals, and lifestyle — ensuring the best possible outcome.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-num">04</div>
+            <div>
+              <h4>Lifetime Natural Results</h4>
+              <p>Transplanted follicles are permanent. We design natural-looking hairlines that will age gracefully with you for the rest of your life.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-img">
+        <img src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=900&q=80" alt="State of the art hair restoration facility" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="section-inner">
+    <p class="section-label">Patient Stories</p>
+    <h2 class="section-title">What Our Patients <em>Say</em></h2>
+    <div class="divider"></div>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>I was nervous going in, but the team made me feel completely at ease. Six months post-FUE and the results are beyond anything I imagined. My hairline looks completely natural.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">M</div>
+          <div class="testimonial-author-info">
+            <strong>Michael R.</strong>
+            <span>FUE Hair Transplant Patient</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>After years of trying every product on the market, I finally took the step. The scalp micropigmentation gave me a full, youthful look again. Absolutely life-changing.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">D</div>
+          <div class="testimonial-author-info">
+            <strong>David T.</strong>
+            <span>Scalp Micropigmentation Patient</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>The PRP sessions combined with FUE gave me incredible density. The staff genuinely cared about my outcome at every follow-up. I highly recommend this clinic to anyone in Florida.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">J</div>
+          <div class="testimonial-author-info">
+            <strong>James K.</strong>
+            <span>FUE + PRP Combination Patient</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="section-inner" style="text-align:center;">
+    <p class="section-label">Take the First Step</p>
+    <h2 class="section-title">Ready to Restore Your Hair?</h2>
+    <div class="divider" style="margin: 0 auto 20px;"></div>
+    <p>Schedule your complimentary consultation with our specialists today. We'll assess your hair loss, discuss your goals, and recommend the ideal treatment — with zero obligation.</p>
+    <a href="#contact" class="btn-primary">Book My Free Consultation</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div>
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Visit Our <em>Clinic</em></h2>
+        <div class="divider"></div>
+        <div class="contact-info-item">
+          <h4>Address</h4>
+          <p>123 Beach Street, Suite 200<br>Daytona Beach, Florida 32118</p>
+        </div>
+        <div class="contact-info-item">
+          <h4>Phone</h4>
+          <a href="tel:3865550100">(386) 555-0100</a>
+        </div>
+        <div class="contact-info-item">
+          <h4>Email</h4>
+          <a href="mailto:info@daytonahairrestoration.com">info@daytonahairrestoration.com</a>
+        </div>
+        <div class="contact-info-item">
+          <h4>Office Hours</h4>
+          <p>Monday – Friday: 8:00 AM – 6:00 PM<br>Saturday: 9:00 AM – 2:00 PM<br>Sunday: Closed</p>
+        </div>
+      </div>
+      <div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" placeholder="(386) 555-0000" />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="john@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Service of Interest</label>
+            <select>
+              <option value="">Select a service...</option>
+              <option>FUE Hair Transplant</option>
+              <option>FUT Strip Method</option>
+              <option>Scalp Micropigmentation</option>
+              <option>PRP Therapy</option>
+              <option>Not Sure – Need Guidance</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tell Us About Your Goals (Optional)</label>
+            <textarea placeholder="Briefly describe your hair loss and what you're hoping to achieve..."></textarea>
+          </div>
+          <p class="form-disclaimer">By submitting, you agree to be contacted by our team. Your information is kept private and never sold.</p>
+          <button type="submit" class="btn-primary" style="width:100%; text-align:center; border-radius:2px; font-size:13px;">
+            Request My Free Consultation
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">
+          Daytona Hair Restoration
+          <span>Daytona Beach, Florida</span>
+        </div>
+        <p class="footer-about">Providing advanced, minimally invasive hair restoration solutions to patients throughout Daytona Beach and the greater Volusia County area. Your confidence is our mission.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">FUE Hair Transplant</a></li>
+          <li><a href="#services">FUT Strip Method</a></li>
+          <li><a href="#services">Scalp Micropigmentation</a></li>
+          <li><a href="#services">PRP Therapy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Our Clinic</h5>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#results">Before & Afters</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:3865550100">(386) 555-0100</a></li>
+          <li><a href="mailto:info@daytonahairrestoration.com">info@daytonahairrestoration.com</a></li>
+          <li><a href="#contact">123 Beach Street, Suite 200<br>Daytona Beach, FL 32118</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Daytona Hair Restoration. All rights reserved.</span>
+      <span>Individual results may vary. Consult a physician before treatment. <a href="#">Privacy Policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type=submit]');
+    btn.textContent = '✓ Request Received — We\'ll Be in Touch Soon!';
+    btn.style.background = '#5A8A5A';
+    btn.disabled = true;
+  }
+
+  // Subtle scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.service-card, .why-item, .testimonial-card, .banda-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
